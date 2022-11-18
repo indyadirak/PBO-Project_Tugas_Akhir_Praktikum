@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a7a87519-d9a0-406c-94ce-be32c013e1f9" name="Changes" comment="13 - 11 - 2022 || 21 : 20">
+    <list default="true" id="a7a87519-d9a0-406c-94ce-be32c013e1f9" name="Changes" comment="17-11-2022 ||19:58">
       <change beforePath="$PROJECT_DIR$/../../../../pelajaran/Minggu ke-6/non responsi/praktik/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../pelajaran/Minggu ke-6/non responsi/praktik/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../pelajaran/Minggu ke-6/non responsi/praktik/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../pelajaran/Minggu ke-6/non responsi/praktik/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../tamplate [fix]/Template PBO Periode VIII/9 - Format Laporan Praktikum.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../tamplate [fix]/Template PBO Periode VIII/9 - Format Laporan Praktikum.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../tamplate [fix]/Template PBO Periode VIII/~$ - Format Laporan Asistensi.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +65,8 @@
       <workItem from="1668323958496" duration="2002000" />
       <workItem from="1668381813297" duration="470000" />
       <workItem from="1668477764574" duration="895000" />
+      <workItem from="1668689845077" duration="1237000" />
+      <workItem from="1668761690791" duration="475000" />
     </task>
     <task id="LOCAL-00001" summary="12 - 11 - 2022 || 05:09">
       <created>1668204666202</created>
@@ -96,7 +99,8 @@
     </ignored-roots>
     <MESSAGE value="12 - 11 - 2022 || 05:09" />
     <MESSAGE value="13 - 11 - 2022 || 21 : 20" />
-    <option name="LAST_COMMIT_MESSAGE" value="13 - 11 - 2022 || 21 : 20" />
+    <MESSAGE value="17-11-2022 ||19:58" />
+    <option name="LAST_COMMIT_MESSAGE" value="17-11-2022 ||19:58" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
