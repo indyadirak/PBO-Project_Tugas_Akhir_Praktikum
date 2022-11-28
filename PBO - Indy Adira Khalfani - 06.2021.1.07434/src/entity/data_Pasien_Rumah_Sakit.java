@@ -4,7 +4,7 @@ import entity.biodata_rumah_sakit;
 
 public class data_Pasien_Rumah_Sakit extends biodata_rumah_sakit
 {
-    String verifikasi,alamat;
+    protected String verifikasi,alamat;
 
 
     public data_Pasien_Rumah_Sakit(String nama, String email, String password, String verifikasi, String alamat) {

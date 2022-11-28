@@ -2,7 +2,7 @@ package proses;
 
 import entity.Data_Dokter_Rumah_Sakit;
 import entity.data_Pasien_Rumah_Sakit;
-import org.jetbrains.annotations.NotNull;
+
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -156,7 +156,8 @@ public class Pilihan_Menu implements tampilkan_data_induk
         System.out.println("3. nama.");
         System.out.println("4. alamat.");
         System.out.println("5. verifikasi data");
-        System.out.println("6. kembali ke menu sebelumnya.");
+        System.out.println("6. menghapus data pasien");
+        System.out.println("7. kembali ke menu sebelumnya.");
         System.out.println("");
         System.out.printf("masukkan inputan : ");
         input_proses_perubahan_data_pasien = input.nextInt();
@@ -199,6 +200,11 @@ public class Pilihan_Menu implements tampilkan_data_induk
                 break;
             }
             case 6:
+            {
+                proses_penghapusan_data_pasien();
+                proses_perubahan_data_pasien();
+            }
+            case 7:
             {
                 pilihan_menu_dokter();
                 break;
@@ -352,6 +358,31 @@ public class Pilihan_Menu implements tampilkan_data_induk
         }
 
 
+    }
+
+    public void proses_penghapusan_data_pasien()
+    {
+        String input_data;
+        boolean check_ketemu_email = false;
+
+        System.out.print("masukkan email yang ingin dihapus : ");
+        input_data = input.next();
+
+        for (int perulangan = 0 ; perulangan < data_pasien.toArray().length; perulangan++)
+        {
+            if (data_pasien.get(perulangan).getEmail().equals(input_data))
+            {
+                data_pasien.remove(perulangan);
+                System.out.println("data telah dihapus");
+                check_ketemu_email = true;
+            }
+
+        }
+
+        if (check_ketemu_email == false)
+        {
+            System.out.println("data yang dimasukkan, tidak ditemukan....");
+        }
     }
 
     public void proses_verifikasi_pasien(int nomor)
