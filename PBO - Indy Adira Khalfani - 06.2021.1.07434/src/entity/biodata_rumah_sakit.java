@@ -1,6 +1,6 @@
 package entity;
 
-public class biodata_rumah_sakit
+public abstract class biodata_rumah_sakit
 {
     protected String nama, email,password;
 
