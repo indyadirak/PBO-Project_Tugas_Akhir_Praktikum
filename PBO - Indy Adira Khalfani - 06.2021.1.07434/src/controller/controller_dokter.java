@@ -43,4 +43,9 @@ public class controller_dokter
     {
         controller_utama.Model_Pasien.proses_menampilkan_data_pasien();
     }
+
+    public int menghapus_akun_pasien(String email)
+    {
+        return controller_utama.Model_Pasien.proses_menghapus_akun_pasien(email);
+    }
 }

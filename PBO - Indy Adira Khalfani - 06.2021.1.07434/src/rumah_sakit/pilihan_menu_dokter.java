@@ -8,8 +8,6 @@ public class pilihan_menu_dokter implements interface_menu
 {
     Scanner input = new Scanner(System.in);
 
-
-
     public void pilihan_menu()
     {
         System.out.println("pilihan menu dokter");
@@ -87,7 +85,7 @@ public class pilihan_menu_dokter implements interface_menu
             login_akun_dokter();
         }
     }
-
+// tugas, menambah delete akun
     public void pilihan_menu_perubahan_dokter()
     {
         System.out.println("pilihan menu : ");
@@ -97,7 +95,8 @@ public class pilihan_menu_dokter implements interface_menu
         System.out.println("4. merubah data alamat pasien");
         System.out.println("5. memverifikasi data pasien");
         System.out.println("6. melihat data pasien");
-        System.out.println("7. kembali ke menu sebelumnya.");
+        System.out.println("7. menghapus akun pasien");
+        System.out.println("8. kembali ke menu sebelumnya.");
         System.out.println(" ");
         System.out.print("masukkan pilihan menu : ");
         int inputan_pilihan_menu_perubahan_dokter = input.nextInt();
@@ -142,6 +141,11 @@ public class pilihan_menu_dokter implements interface_menu
                 pilihan_menu_perubahan_dokter();
             }
             case 7:
+            {
+                menghapus_akun_pasien_page();
+                pilihan_menu_perubahan_dokter();
+            }
+            case 8:
             {
                 pilihan_menu();
                 break;
@@ -207,7 +211,7 @@ public class pilihan_menu_dokter implements interface_menu
     {
         System.out.print("masukkan email     : ");
         String email = input.next();
-        System.out.print("masukkan email baru : ");
+        System.out.print("masukkan password baru : ");
         String password_baru = input.next();
         proses_perubahan_password_pasien(email, password_baru);
     }
@@ -231,7 +235,7 @@ public class pilihan_menu_dokter implements interface_menu
     {
         System.out.print("masukkan email     : ");
         String email = input.next();
-        System.out.print("masukkan email baru : ");
+        System.out.print("masukkan alamat baru : ");
         String alamat_baru = input.next();
         proses_perubahan_alamat_pasien(email, alamat_baru);
     }
@@ -276,5 +280,27 @@ public class pilihan_menu_dokter implements interface_menu
     public void proses_menampilkan_data_pasien()
     {
         object_deklarasi.Controller_Dokter.menampilkan_data_pasien();
+    }
+
+    public void menghapus_akun_pasien_page()
+    {
+        System.out.print("masukkan email pasien : ");
+        String inputan_email = input.next();
+        proses_menghapus_pasien(inputan_email);
+
+    }
+
+    public void proses_menghapus_pasien(String inputan_email)
+    {
+        int nilai_pengecekan = object_deklarasi.Controller_Dokter.menghapus_akun_pasien(inputan_email);
+
+        if (nilai_pengecekan == 1)
+        {
+            System.out.println("data berhasil dihapus");
+        }
+        else
+        {
+            System.out.println("data tidak berhasil dihapus");
+        }
     }
 }

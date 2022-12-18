@@ -114,4 +114,18 @@ public class model_pasien
         }
         return  hasil_pengecekan;
     }
+
+    public int proses_menghapus_akun_pasien(String email)
+    {
+        int status_akun = 0;
+        for (int perulangan = 0; perulangan < data_pasien_rumah_sakit.size(); perulangan++)
+        {
+            if (data_pasien_rumah_sakit.get(perulangan).getEmail().equals(email))
+            {
+                data_pasien_rumah_sakit.remove(perulangan);
+                status_akun = 1;
+            }
+        }
+        return  status_akun;
+    }
 }
