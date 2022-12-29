@@ -1,44 +1,51 @@
 package rumah_sakit;
 
+import rumah_sakit.dokter.pilihan_menu_dokter;
+import rumah_sakit.dokter.proses_pilihan_menu_dokter.registrasi_akun_dokter;
+import rumah_sakit.pasien.pilihan_menu_pasien;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Scanner;
 
-public class Pilihan_Menu implements interface_menu
+public class Pilihan_Menu extends JFrame
 {
     Scanner input = new Scanner(System.in);
-    public void pilihan_menu()
-    {
-        System.out.println("1. dokter");
-        System.out.println("2. pasien");
-        System.out.println("3. exit");
-        System.out.print("masukkan pilihan : ");
-        int input_pilihan_menu = input.nextInt();
-        proses_pilihan_menu( input_pilihan_menu);
-    }
+    public JPanel pilihan_menu;
+    private JButton tombol_untuk_pasien;
+    private JButton tombol_untuk_dokter;
+    private JButton tombol_untuk_exit_program;
+    private JLabel Aplikasi_Pendaftaran_Pasien_Rumah_Sakit;
 
-    public void proses_pilihan_menu(int input_pilihan_menu)
-    {
-        switch (input_pilihan_menu)
-        {
-            case 1:
-            {
-                new pilihan_menu_dokter().pilihan_menu();
-                break;
+    public Pilihan_Menu() {
+        tombol_untuk_exit_program.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+
             }
-            case 2:
-            {
-                new pilihan_menu_pasien().pilihan_menu();
-                break;
+        });
+        tombol_untuk_pasien.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pilihan_menu_pasien gui_pilihan_menu_pasien = new pilihan_menu_pasien();
+                gui_pilihan_menu_pasien.setContentPane(gui_pilihan_menu_pasien.Pilihan_Menu_Pasien);
+                gui_pilihan_menu_pasien.setSize(900, 900 );
+                gui_pilihan_menu_pasien.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                gui_pilihan_menu_pasien.setVisible(true);
             }
-            case 3:
+        });
+        tombol_untuk_dokter.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
             {
-                break;
+                pilihan_menu_dokter gui_pilihan_menu_dokter = new pilihan_menu_dokter();
+                gui_pilihan_menu_dokter.setContentPane(gui_pilihan_menu_dokter.panel_pilihan_menu_dokter);
+                gui_pilihan_menu_dokter.setSize(900, 900 );
+                gui_pilihan_menu_dokter.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                gui_pilihan_menu_dokter.setVisible(true);
             }
-            default:
-            {
-                System.out.println("maaf, inputan anda salah.");
-                pilihan_menu();
-                break;
-            }
-        }
+        });
     }
 }

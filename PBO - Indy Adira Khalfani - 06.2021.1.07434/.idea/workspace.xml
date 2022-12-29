@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7a87519-d9a0-406c-94ce-be32c013e1f9" name="Changes" comment="17-11-2022 ||19:58" />
+    <list default="true" id="a7a87519-d9a0-406c-94ce-be32c013e1f9" name="Changes" comment="17-11-2022 ||19:58">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,8 +44,10 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;227&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/kuliah/semester 3/PBO/praktikum/praktikum/Tugas Akhir/PBO - Indy Adira Khalfani - 06.2021.1.07434&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/media/Lvr_Viole/Data/kuliah/semester 3/PBO/praktikum/praktikum/Tugas Akhir/PBO - Indy Adira Khalfani - 06.2021.1.07434&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -52,6 +56,14 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\kuliah\semester 3\PBO\praktikum\praktikum\Tugas Akhir\PBO - Indy Adira Khalfani - 06.2021.1.07434\src\rumah_sakit\dokter\proses_pilihan_menu_dokter\prose_perubahan_data" />
+      <recent name="D:\kuliah\semester 3\PBO\praktikum\praktikum\Tugas Akhir\PBO - Indy Adira Khalfani - 06.2021.1.07434\src\rumah_sakit\dokter\proses_pilihan_menu_dokter" />
+      <recent name="D:\kuliah\semester 3\PBO\praktikum\praktikum\Tugas Akhir\PBO - Indy Adira Khalfani - 06.2021.1.07434\src\rumah_sakit\pasien" />
+      <recent name="D:\kuliah\semester 3\PBO\praktikum\praktikum\Tugas Akhir\PBO - Indy Adira Khalfani - 06.2021.1.07434\src\rumah_sakit\dokter" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -62,6 +74,7 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <extension name="recording" autostart="false" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,6 +131,25 @@
       <workItem from="1671015879080" duration="6110000" />
       <workItem from="1671170924573" duration="1283000" />
       <workItem from="1671323111398" duration="908000" />
+      <workItem from="1671432890752" duration="2395000" />
+      <workItem from="1671437614464" duration="245000" />
+      <workItem from="1671437882306" duration="245000" />
+      <workItem from="1671438973357" duration="90000" />
+      <workItem from="1671504970845" duration="427000" />
+      <workItem from="1671505981571" duration="1413000" />
+      <workItem from="1671802782001" duration="806000" />
+      <workItem from="1671803651830" duration="25000" />
+      <workItem from="1672054015253" duration="9410000" />
+      <workItem from="1672124885242" duration="292000" />
+      <workItem from="1672125560812" duration="2529000" />
+      <workItem from="1672128156190" duration="95000" />
+      <workItem from="1672140525798" duration="9004000" />
+      <workItem from="1672196954564" duration="125000" />
+      <workItem from="1672201310390" duration="317000" />
+      <workItem from="1672225988812" duration="35000" />
+      <workItem from="1672284583930" duration="1148000" />
+      <workItem from="1672311471184" duration="4614000" />
+      <workItem from="1672316432346" duration="16769000" />
     </task>
     <task id="LOCAL-00001" summary="12 - 11 - 2022 || 05:09">
       <created>1668204666202</created>
