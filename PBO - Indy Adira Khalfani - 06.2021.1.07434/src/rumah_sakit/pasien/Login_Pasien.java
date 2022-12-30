@@ -23,9 +23,9 @@ public class Login_Pasien extends JFrame
 
                 String Input_Email = input_email.getText();
                 String Input_Password = input_password.getText();
-                pilihan_menu_pasien gui_pilihan_menu_pasien = new pilihan_menu_pasien();
                 proses_login_pasien(Input_Email,Input_Password);
-                gui_pilihan_menu_pasien.setContentPane(gui_pilihan_menu_pasien.Pilihan_Menu_Pasien);
+                tampilkan_data_pasien gui_pilihan_menu_pasien = new tampilkan_data_pasien();
+                gui_pilihan_menu_pasien.setContentPane(gui_pilihan_menu_pasien.panel);
                 gui_pilihan_menu_pasien.setSize(900, 900 );
                 gui_pilihan_menu_pasien.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 gui_pilihan_menu_pasien.setVisible(true);

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class model_pasien
 {
+    int index;
     ArrayList<data_Pasien_Rumah_Sakit> data_pasien_rumah_sakit = new ArrayList<>();
     public int proses_perubahan_data_nama_pasien(String email, String nama)
     {
@@ -103,13 +104,8 @@ public class model_pasien
         {
             if (data_pasien_rumah_sakit.get(perulangan).getEmail().equals(inputan_email) && data_pasien_rumah_sakit.get(perulangan).getPassword().equals(inputan_password))
             {
-                System.out.println("==============================================");
-                System.out.println("nama       : "+data_pasien_rumah_sakit.get(perulangan).getNama());
-                System.out.println("email      : "+data_pasien_rumah_sakit.get(perulangan).getEmail());
-                System.out.println("alamat     : "+data_pasien_rumah_sakit.get(perulangan).getAlamat());
-                System.out.println("verifikasi : "+data_pasien_rumah_sakit.get(perulangan).getVerifikasi());
-                System.out.println("==============================================");
                 hasil_pengecekan = 1;
+                index = perulangan;
             }
         }
         return  hasil_pengecekan;
@@ -127,5 +123,22 @@ public class model_pasien
             }
         }
         return  status_akun;
+    }
+    public String getemail(){
+        return data_pasien_rumah_sakit.get(index).getEmail();
+    }
+    public String getnama()
+    {
+        return data_pasien_rumah_sakit.get(index).getNama();
+    }
+
+    public String getalamat()
+    {
+        return data_pasien_rumah_sakit.get(index).getAlamat();
+    }
+
+    public String getverifikasi()
+    {
+        return data_pasien_rumah_sakit.get(index).getVerifikasi();
     }
 }
