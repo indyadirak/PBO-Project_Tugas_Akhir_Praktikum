@@ -9,8 +9,21 @@ public class controller_pasien
     }
     public int proses_menampilkan_data_pasien_2(String inputan_email, String inputan_password)
     {
-        index =  controller_utama.Model_Pasien.proses_menampilkan_data_pasien_2(inputan_email,inputan_password);
-        return index;
+        int hasil_pengecekan = 0;
+        for (int perulangan = 0; perulangan < controller_utama.Model_Pasien.data_pasien_rumah_sakit.size(); perulangan++)
+        {
+            if (controller_utama.Model_Pasien.data_pasien_rumah_sakit.get(perulangan).getEmail().equals(inputan_email) && controller_utama.Model_Pasien.data_pasien_rumah_sakit.get(perulangan).getPassword().equals(inputan_password))
+            {
+                System.out.println("nomor"+(perulangan+1));
+                System.out.println("nama       : "+controller_utama.Model_Pasien.data_pasien_rumah_sakit.get(perulangan).getNama());
+                System.out.println("email      : "+controller_utama.Model_Pasien.data_pasien_rumah_sakit.get(perulangan).getEmail());
+                System.out.println("alamat     : "+controller_utama.Model_Pasien.data_pasien_rumah_sakit.get(perulangan).getAlamat());
+                System.out.println("verifikasi : "+controller_utama.Model_Pasien.data_pasien_rumah_sakit.get(perulangan).getVerifikasi());
+                hasil_pengecekan = 1;
+            }
+        }
+        return  hasil_pengecekan;
+
     }
 
     public String mendapat_nama()
