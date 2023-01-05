@@ -94,20 +94,7 @@ public class controller_dokter
         return status_ditemukan;
     }
 
-    public void menampilkan_data_pasien()
-    {
-        for (int perulangan = 0; perulangan < controller_utama.Model_Pasien.data_pasien_rumah_sakit.size(); perulangan++)
-        {
-            System.out.println("==============================================");
-            System.out.println("nomor"+(perulangan+1));
-            System.out.println("nama       : "+controller_utama.Model_Pasien.data_pasien_rumah_sakit.get(perulangan).getNama());
-            System.out.println("email      : "+controller_utama.Model_Pasien.data_pasien_rumah_sakit.get(perulangan).getEmail());
-            System.out.println("alamat     : "+controller_utama.Model_Pasien.data_pasien_rumah_sakit.get(perulangan).getAlamat());
-            System.out.println("verifikasi : "+controller_utama.Model_Pasien.data_pasien_rumah_sakit.get(perulangan).getVerifikasi());
-            System.out.println("==============================================");
-        }
 
-    }
 
     public int menghapus_akun_pasien(String email)
     {

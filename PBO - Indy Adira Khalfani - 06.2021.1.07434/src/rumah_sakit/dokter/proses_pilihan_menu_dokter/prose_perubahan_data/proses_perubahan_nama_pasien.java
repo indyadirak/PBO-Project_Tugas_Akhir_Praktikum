@@ -10,17 +10,80 @@ public class proses_perubahan_nama_pasien extends JFrame
 {
 
     public JPanel panel_perubahan_nama_pasien;
+    public JLabel judul;
+    public JLabel judul_email;
+    public JLabel judul_nama_baru;
     private JTextField input_email;
     private JTextField input_nama_baru;
-    private JButton selesaiButton;
-    public proses_perubahan_nama_pasien() {
-        selesaiButton.addActionListener(new ActionListener() {
+    private JButton tombol_selesai;
+    public proses_perubahan_nama_pasien()
+    {
+        setTitle("aplikasi rumah sakit");
+        setSize(600,600);
+        setLayout(null);
+        judul();
+        judul_input_email();
+        input_email_lama();
+        judul_nama_baru();
+        input_nama_baru();
+        tombol_selesai();
+
+    }
+
+    public void judul()
+    {
+        judul = new JLabel("mengubah data nama pasien");
+        int X = 150;
+        int y= 50;
+        int width = 300;
+        int height = 30;
+        judul.setBounds(X,y,width,height);
+
+        add(judul);
+
+    }
+
+    public void judul_input_email()
+    {
+        judul_email = new JLabel("email = ");
+        judul_email.setBounds(140,90, 100,30);
+        add(judul_email);
+    }
+
+    public void input_email_lama()
+    {
+        input_email = new JTextField();
+        input_email.setBounds(220,90, 100,30);
+        add(input_email);
+    }
+
+
+    public void judul_nama_baru()
+    {
+        judul_nama_baru = new JLabel("nama baru =  ");
+        judul_nama_baru.setBounds(140,130, 100,30);
+        add(judul_nama_baru);
+
+    }
+
+    public void input_nama_baru()
+    {
+        input_nama_baru = new JTextField();
+        input_nama_baru.setBounds(220, 130, 100, 30);
+        add(input_nama_baru);
+    }
+
+    public void tombol_selesai()
+    {
+        tombol_selesai = new JButton("selesai");
+        tombol_selesai.setBounds(300,170,100,30);
+        add(tombol_selesai);
+        tombol_selesai.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String Input_email = input_email.getText();
-                String Input_nama_baru = input_nama_baru.getText();
-                proses_perubahan_nama_pasien(Input_email, Input_nama_baru);
-
+                String email = input_email.getText();
+                String nama_baru= input_nama_baru.getText();
+                proses_perubahan_nama_pasien(email,nama_baru);
             }
         });
     }
@@ -32,21 +95,13 @@ public class proses_perubahan_nama_pasien extends JFrame
         nilai_check = object_deklarasi.Controller_Dokter.perubahan_data_nama_pasien(email, nama);
         if (nilai_check == 1)
         {
-            System.out.println("data berhasil dirubah");
             pilihan_menu_perubahan_dokter gui_pilihan_menu = new pilihan_menu_perubahan_dokter();
-            gui_pilihan_menu.setContentPane(gui_pilihan_menu.panel_pilihan_menu);
-            gui_pilihan_menu.setSize(900, 900);
-            gui_pilihan_menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             gui_pilihan_menu.setVisible(true);
         }
         else
         {
-            System.out.println("data tidak berhasil dirubah...");
-            proses_perubahan_nama_pasien gui_pilihan_menu = new proses_perubahan_nama_pasien();
-            gui_pilihan_menu.setContentPane(gui_pilihan_menu.panel_perubahan_nama_pasien);
-            gui_pilihan_menu.setSize(900, 900);
-            gui_pilihan_menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            gui_pilihan_menu.setVisible(true);
+            proses_perubahan_nama_pasien gui_proses_perubahan_nama_pasien = new proses_perubahan_nama_pasien();
+            gui_proses_perubahan_nama_pasien.setVisible(true);
         }
     }
 }

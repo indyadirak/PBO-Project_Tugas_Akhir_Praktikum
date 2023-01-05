@@ -1,11 +1,13 @@
 package rumah_sakit.pasien;
 
+import org.junit.Test;
 import rumah_sakit.Pilihan_Menu;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Scanner;
+
 
 public class pilihan_menu_pasien extends JFrame
 {
@@ -16,81 +18,68 @@ public class pilihan_menu_pasien extends JFrame
     private JLabel judul;
     public JPanel Pilihan_Menu_Pasien;
 
-    public pilihan_menu_pasien() {
-        tombol_kembali_ke_menu_sebelumnya.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Pilihan_Menu gui_pilihan_menu = new Pilihan_Menu();
-                gui_pilihan_menu.setContentPane(gui_pilihan_menu.pilihan_menu);
-                gui_pilihan_menu.setSize(900, 900 );
-                gui_pilihan_menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                gui_pilihan_menu.setVisible(true);
-            }
-        });
-        tombol_login_pasien.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Login_Pasien gui_login_pasien = new Login_Pasien();
-                gui_login_pasien.setContentPane(gui_login_pasien.panel_login_pasien);
-                gui_login_pasien.setSize(900, 900 );
-                gui_login_pasien.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                gui_login_pasien.setVisible(true);
-            }
-        });
+    public pilihan_menu_pasien()
+    {
+        setTitle("aplikasi rumah sakit");
+        setSize(600,600);
+        setLayout(null);
+        judul();
+        tombol_registrasi_pasien();
+        tombol_login_pasien();
+        tombol_kembali_ke_menu_sebelumnya();
+
+    }
+    public void judul()
+    {
+        judul = new JLabel("Aplikasi Pendaftaran Pasien Rumah Sakit");
+        int X = 150;
+        int y= 50;
+        int width = 300;
+        int height = 30;
+        judul.setBounds(X,y,width,height);
+
+        add(judul);
+    }
+
+    public void tombol_registrasi_pasien()
+    {
+        tombol_registrasi_pasien = new JButton("registrasi pasien");
+        tombol_registrasi_pasien.setBounds(170,90,200,30);
+        add(tombol_registrasi_pasien);
         tombol_registrasi_pasien.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Registrasi_Pasien gui_pilihan_menu = new Registrasi_Pasien();
-                gui_pilihan_menu.setContentPane(gui_pilihan_menu.panel_registrasi_pasien);
-                gui_pilihan_menu.setSize(900, 900 );
-                gui_pilihan_menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 gui_pilihan_menu.setVisible(true);
             }
         });
     }
 
-   /* public void pilihan_menu()
+    public void tombol_login_pasien()
     {
-        System.out.println("pilihan menu dokter");
-        System.out.println("1. register");
-        System.out.println("2. login");
-        System.out.println("3. kembali ke menu sebelumnya.");
-        System.out.print("masukkan pilihan : ");
-        int inputan_pilihan_menu = input.nextInt();
-        proses_pilihan_menu(inputan_pilihan_menu);
+        tombol_login_pasien = new JButton("login pasien");
+        tombol_login_pasien.setBounds(170,130,200,30);
+        add(tombol_login_pasien);
+        tombol_login_pasien.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Login_Pasien gui_login_pasien = new Login_Pasien();
+                gui_login_pasien.setVisible(true);
+            }
+        });
     }
 
-    public void proses_pilihan_menu(int inputan_pilihan_menu)
+    public void tombol_kembali_ke_menu_sebelumnya()
     {
-        switch (inputan_pilihan_menu)
-        {
-            case 1:
-            {
-                new Registrasi_Pasien().registrasi_pasien();
-                pilihan_menu();
-                break;
+        tombol_kembali_ke_menu_sebelumnya = new JButton("kembali ke menu utama");
+        tombol_kembali_ke_menu_sebelumnya.setBounds(170, 170, 200, 30);
+        add(tombol_kembali_ke_menu_sebelumnya);
+        tombol_kembali_ke_menu_sebelumnya.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Pilihan_Menu gui_pilihan_menu = new Pilihan_Menu();
+                gui_pilihan_menu.setVisible(true);
             }
-            case 2:
-            {
-                new Login_Pasien().login_pasien();
-                pilihan_menu();
-                break;
-            }
-            case 3:
-            {
-                new Pilihan_Menu().pilihan_menu();
-                break;
-            }
-            default:
-            {
-                System.out.println("mohon maaf, pilihan anda tidak ada....");
-                pilihan_menu();
-                break;
-            }
-        }
-    }*/
-
-
-
-
+        });
+    }
 }

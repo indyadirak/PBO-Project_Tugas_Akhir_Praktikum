@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class model_pasien
 {
-    int index;
+
     public ArrayList<data_Pasien_Rumah_Sakit> data_pasien_rumah_sakit = new ArrayList<>();
     public void proses_perubahan_data_nama_pasien(int index, String nama)
     {
@@ -39,24 +39,24 @@ public class model_pasien
         data_pasien_rumah_sakit.add(new data_Pasien_Rumah_Sakit(inputan_nama,inputan_email,inputan_password,"data anda sedang diverifikasi",inputan_alamat_rumah));
     }
 
-    public int proses_menghapus_akun_pasien(int index)
+    public void proses_menghapus_akun_pasien(int index)
     {
         data_pasien_rumah_sakit.remove(index);
     }
-    public String getemail(){
+    public String getemail(int index){
         return data_pasien_rumah_sakit.get(index).getEmail();
     }
-    public String getnama()
+    public String getnama(int index)
     {
         return data_pasien_rumah_sakit.get(index).getNama();
     }
 
-    public String getalamat()
+    public String getalamat(int index)
     {
         return data_pasien_rumah_sakit.get(index).getAlamat();
     }
 
-    public String getverifikasi()
+    public String getverifikasi(int index)
     {
         return data_pasien_rumah_sakit.get(index).getVerifikasi();
     }
