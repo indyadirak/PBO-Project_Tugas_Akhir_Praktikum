@@ -31,12 +31,12 @@ public class model_pasien
 
     public void proses_verifikasi_data_pasien(int index)
     {
-        data_pasien_rumah_sakit.get(index).setVerifikasi("data telah diverifikasi");
+        data_pasien_rumah_sakit.get(index).setVerifikasi("telah diverifikasi");
     }
 
     public void proses_registrasi_pasien( String inputan_nama ,String inputan_email,String inputan_password,String inputan_alamat_rumah)
     {
-        data_pasien_rumah_sakit.add(new data_Pasien_Rumah_Sakit(inputan_nama,inputan_email,inputan_password,"data anda sedang diverifikasi",inputan_alamat_rumah));
+        data_pasien_rumah_sakit.add(new data_Pasien_Rumah_Sakit(inputan_nama,inputan_email,inputan_password,"sedang diverifikasi",inputan_alamat_rumah));
     }
 
     public void proses_menghapus_akun_pasien(int index)

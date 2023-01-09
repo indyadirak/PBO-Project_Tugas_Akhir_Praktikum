@@ -1,6 +1,6 @@
 package rumah_sakit.pasien;
 
-import org.junit.Test;
+
 import rumah_sakit.Pilihan_Menu;
 
 import javax.swing.*;

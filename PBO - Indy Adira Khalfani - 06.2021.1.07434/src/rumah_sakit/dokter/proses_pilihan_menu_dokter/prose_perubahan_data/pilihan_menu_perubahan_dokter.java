@@ -16,6 +16,7 @@ public class pilihan_menu_perubahan_dokter extends JFrame
     private JButton tombol_verifikasi_akun_pasien;
     private JButton tombol_menghapus_akun_pasien;
     private JButton tombol_log_out;
+    private JButton tombol_tampilkan_data_keseluruhan;
     public JPanel panel_pilihan_menu;
 
     public pilihan_menu_perubahan_dokter() {
@@ -30,6 +31,7 @@ public class pilihan_menu_perubahan_dokter extends JFrame
         tombol_verifikasi_data_pasien();
         tombol_delete_data_pasien();
         tombol_log_out();
+        tombol_tampilkan_data();
     }
 
     public void judul()
@@ -134,6 +136,20 @@ public class pilihan_menu_perubahan_dokter extends JFrame
             public void actionPerformed(ActionEvent e) {
                 pilihan_menu_dokter gui_pilihan_menu_dokter = new pilihan_menu_dokter();
                 gui_pilihan_menu_dokter.setVisible(true);
+            }
+        });
+    }
+
+    public void tombol_tampilkan_data()
+    {
+        tombol_tampilkan_data_keseluruhan = new JButton("tampilkan data keseluruhan");
+        tombol_tampilkan_data_keseluruhan.setBounds(170,370,200,30);
+        add(tombol_tampilkan_data_keseluruhan);
+        tombol_tampilkan_data_keseluruhan.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                proses_menampilkan_data_pasien_keseluruhan Proses_Menampilkan_Data_Keseluruhan = new proses_menampilkan_data_pasien_keseluruhan();
+                Proses_Menampilkan_Data_Keseluruhan.setVisible(true);
             }
         });
     }

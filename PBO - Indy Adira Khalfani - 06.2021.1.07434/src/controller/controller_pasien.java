@@ -1,9 +1,12 @@
 package controller;
 
 import rumah_sakit.Pilihan_Menu;
+import rumah_sakit.object_deklarasi;
 import rumah_sakit.pasien.Login_Pasien;
 import rumah_sakit.pasien.pilihan_menu_pasien;
 import rumah_sakit.pasien.tampilkan_data_pasien;
+
+import javax.swing.table.DefaultTableModel;
 
 public class controller_pasien
 {
@@ -55,7 +58,22 @@ public class controller_pasien
         return controller_utama.Model_Pasien.getverifikasi(index);
     }
 
-
+    public DefaultTableModel menampilkan_data_keseluruhan()
+    {
+        DefaultTableModel tabel_data = new DefaultTableModel();
+        Object[] kolom = {"Nama", "Email", "Alamat", "Verifikasi"};
+        tabel_data.setColumnIdentifiers(kolom);
+        for (int perulangan = 0 ; perulangan <controller_utama.Model_Pasien.data_pasien_rumah_sakit.size(); perulangan++)
+        {
+            Object[] data = new Object[4];
+            data[0] = controller_utama.Model_Pasien.data_pasien_rumah_sakit.get(perulangan).getNama();
+            data[1] = controller_utama.Model_Pasien.data_pasien_rumah_sakit.get(perulangan).getEmail();
+            data[2] = controller_utama.Model_Pasien.data_pasien_rumah_sakit.get(perulangan).getAlamat();
+            data[3] = controller_utama.Model_Pasien.data_pasien_rumah_sakit.get(perulangan).getVerifikasi();
+            tabel_data.addRow(data);
+        }
+        return tabel_data;
+    }
 
 
 }

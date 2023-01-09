@@ -66,7 +66,7 @@ public class proses_perubahan_alamat_pasien extends JFrame
 
     public void input_alamat_baru()
     {
-        Input_alamat_baru = new JPasswordField();
+        Input_alamat_baru = new JTextField();
         Input_alamat_baru.setBounds(220, 130, 100, 30);
         add(Input_alamat_baru);
     }

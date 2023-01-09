@@ -87,7 +87,7 @@ public class controller_dokter
         {
             if (controller_utama.Model_Pasien.data_pasien_rumah_sakit.get(perulangan).getEmail().equals(email))
             {
-                controller_utama.Model_Pasien.proses_verifikasi_data_pasien(index);
+                controller_utama.Model_Pasien.proses_verifikasi_data_pasien(perulangan);
                 status_ditemukan = 1;
             }
         }
