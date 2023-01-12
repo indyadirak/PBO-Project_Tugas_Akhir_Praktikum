@@ -13,4 +13,13 @@ public class model_dokter
         this.data_dokter_rumah_sakit.add(data_dokter_rumah_sakit);
     }
 
+    public String menampilkan_nama(int index)
+    {
+        return data_dokter_rumah_sakit.get(index).getNama();
+    }
+    public String menampilkan_npm(int index)
+    {
+        return data_dokter_rumah_sakit.get(index).getNip();
+    }
+
 }

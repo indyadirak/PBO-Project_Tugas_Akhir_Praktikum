@@ -1,6 +1,6 @@
-package rumah_sakit.dokter.proses_pilihan_menu_dokter.prose_perubahan_data;
+package view.dokter.proses_pilihan_menu_dokter.prose_perubahan_data;
 
-import rumah_sakit.dokter.pilihan_menu_dokter;
+import view.dokter.pilihan_menu_dokter;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

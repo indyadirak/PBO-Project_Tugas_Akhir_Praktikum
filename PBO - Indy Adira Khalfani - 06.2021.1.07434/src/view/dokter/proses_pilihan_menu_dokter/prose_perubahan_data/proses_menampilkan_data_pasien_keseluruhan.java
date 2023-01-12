@@ -1,7 +1,6 @@
-package rumah_sakit.dokter.proses_pilihan_menu_dokter.prose_perubahan_data;
+package view.dokter.proses_pilihan_menu_dokter.prose_perubahan_data;
 
-import rumah_sakit.object_deklarasi;
-import rumah_sakit.pasien.pilihan_menu_pasien;
+import view.object_deklarasi;
 
 import javax.swing.*;
 import javax.swing.table.TableModel;

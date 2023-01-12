@@ -1,10 +1,8 @@
 package controller;
 
-import rumah_sakit.Pilihan_Menu;
-import rumah_sakit.object_deklarasi;
-import rumah_sakit.pasien.Login_Pasien;
-import rumah_sakit.pasien.pilihan_menu_pasien;
-import rumah_sakit.pasien.tampilkan_data_pasien;
+import view.pasien.Login_Pasien;
+import view.pasien.pilihan_menu_pasien;
+import view.pasien.tampilkan_data_pasien;
 
 import javax.swing.table.DefaultTableModel;
 

@@ -1,8 +1,7 @@
-package rumah_sakit;
+package view;
 
-import rumah_sakit.dokter.pilihan_menu_dokter;
-import rumah_sakit.dokter.proses_pilihan_menu_dokter.registrasi_akun_dokter;
-import rumah_sakit.pasien.pilihan_menu_pasien;
+import view.dokter.pilihan_menu_dokter;
+import view.pasien.pilihan_menu_pasien;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

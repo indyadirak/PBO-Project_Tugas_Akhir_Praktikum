@@ -1,7 +1,7 @@
-package rumah_sakit.dokter.proses_pilihan_menu_dokter;
+package view.dokter.proses_pilihan_menu_dokter;
 
-import rumah_sakit.dokter.proses_pilihan_menu_dokter.prose_perubahan_data.pilihan_menu_perubahan_dokter;
-import rumah_sakit.object_deklarasi;
+import view.dokter.proses_pilihan_menu_dokter.prose_perubahan_data.pilihan_menu_perubahan_dokter;
+import view.object_deklarasi;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -91,6 +91,7 @@ public class login_akun_dokter extends JFrame
 
         if (nilai_cek == 1)
         {
+            JOptionPane.showMessageDialog(null, "selamat datang " + object_deklarasi.Controller_Dokter.menampilkan_nama() + " nip "+object_deklarasi.Controller_Dokter.menampilkan_nip() );
           pilihan_menu_perubahan_dokter gui_pilihan_menu = new pilihan_menu_perubahan_dokter();
           gui_pilihan_menu.setVisible(true);
         }

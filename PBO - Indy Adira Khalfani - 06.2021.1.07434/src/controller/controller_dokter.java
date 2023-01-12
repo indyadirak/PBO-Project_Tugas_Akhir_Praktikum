@@ -109,4 +109,13 @@ public class controller_dokter
         }
         return  status_akun;
     }
+
+    public String menampilkan_nama()
+    {
+        return controller_utama.Model_Dokter.menampilkan_nama(index);
+    }
+    public String menampilkan_nip()
+    {
+        return controller_utama.Model_Dokter.menampilkan_npm(index);
+    }
 }

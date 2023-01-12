@@ -1,4 +1,4 @@
-package rumah_sakit;
+package view;
 
 import controller.controller_dokter;
 import controller.controller_pasien;

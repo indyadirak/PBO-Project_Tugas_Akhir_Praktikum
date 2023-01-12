@@ -1,7 +1,7 @@
-package rumah_sakit.pasien;
+package view.pasien;
 
 
-import rumah_sakit.Pilihan_Menu;
+import view.Pilihan_Menu;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

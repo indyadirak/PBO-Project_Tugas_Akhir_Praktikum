@@ -1,6 +1,6 @@
-package rumah_sakit.pasien;
+package view.pasien;
 
-import rumah_sakit.object_deklarasi;
+import view.object_deklarasi;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

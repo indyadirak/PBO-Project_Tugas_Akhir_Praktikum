@@ -1,12 +1,10 @@
-package rumah_sakit.pasien;
+package view.pasien;
 
-import rumah_sakit.object_deklarasi;
+import view.object_deklarasi;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
 
 public class tampilkan_data_pasien extends JFrame
 {
